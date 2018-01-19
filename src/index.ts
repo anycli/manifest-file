@@ -14,7 +14,7 @@ export default abstract class ManifestFile {
   protected debug: any
 
   constructor(public type: string, public file: string) {
-    this.debug = require('debug')(`cli:${this.type}`)
+    this.debug = require('debug')(this.type)
     this.lock = new RWLockfile(this.file)
   }
 
