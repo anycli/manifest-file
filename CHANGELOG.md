@@ -1,3 +1,12 @@
+<a name="0.0.3"></a>
+## [0.0.3](https://github.com/dxcli/manifest-file/compare/c1b818285c654e50ca88b3a1fa3f675c90c8c685...v0.0.3) (2018-01-20)
+
+
+### Bug Fixes
+
+* added sourceMap ([9b68698](https://github.com/dxcli/manifest-file/commit/9b68698))
+* ran generator ([d4029a4](https://github.com/dxcli/manifest-file/commit/d4029a4))
+
 <a name="0.0.2"></a>
 ## [0.0.2](https://github.com/dxcli/manifest-file/compare/5120775c5e2dd42811e67a5df193bcadd0b3874d...v0.0.2) (2018-01-20)
 
