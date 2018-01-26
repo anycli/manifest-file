@@ -1,4 +1,4 @@
-import {describe, expect, it} from '@dxcli/dev-test'
+import {expect} from 'fancy-test'
 import * as fs from 'fs-extra'
 import * as path from 'path'
 
@@ -24,6 +24,6 @@ describe('manifest', () => {
     let a = new ManifestFile('manifestfile', file)
     await a.setAFoo(101)
     let b = new ManifestFile('manifestfile', file)
-    await expect(b.getAFoo()).to.eventually.equal(101)
+    expect(await b.getAFoo()).to.equal(101)
   })
 })
