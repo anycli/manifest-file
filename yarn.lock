@@ -126,9 +126,9 @@
     "@semantic-release/npm" "^2.6.4"
     semantic-release "^12.2.2"
 
-"@dxcli/dev-tslint@^0.0.15":
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/@dxcli/dev-tslint/-/dev-tslint-0.0.15.tgz#54dbd49deccaaaf9dc590d83894415e3fab0b0ac"
+"@dxcli/dev-tslint@^0.0.16":
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/@dxcli/dev-tslint/-/dev-tslint-0.0.16.tgz#84aa077d5f0c92f770b2b7eb091588c8553b4c9f"
   dependencies:
     tslint "^5.9.1"
     tslint-xo "^0.5.0"
