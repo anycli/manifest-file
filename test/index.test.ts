@@ -1,4 +1,4 @@
-import {expect} from 'fancy-test'
+import {expect} from 'chai'
 import * as fs from 'fs-extra'
 import * as path from 'path'
 
@@ -12,6 +12,10 @@ class ManifestFile extends File {
   async setAFoo(n: number) {
     return this.set(['foo', n])
   }
+
+  async setAFooAWithoutArray(n: number) {
+    return this.set('foo', n)
+  }
 }
 
 const file = path.join(__dirname, '../tmp/manifest.json')
@@ -23,6 +27,13 @@ describe('manifest', () => {
   it('reads and saves', async () => {
     let a = new ManifestFile('manifestfile', file)
     await a.setAFoo(101)
+    let b = new ManifestFile('manifestfile', file)
+    expect(await b.getAFoo()).to.equal(101)
+  })
+
+  it('reads and saves without array', async () => {
+    let a = new ManifestFile('manifestfile', file)
+    await a.setAFooAWithoutArray(101)
     let b = new ManifestFile('manifestfile', file)
     expect(await b.getAFoo()).to.equal(101)
   })

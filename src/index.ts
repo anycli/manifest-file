@@ -41,7 +41,13 @@ export default abstract class ManifestFile {
     }
   }
 
-  protected async set(...pairs: [string, any][]) {
+  protected async set(key: string, value: any): Promise<void>
+  protected async set(...pairs: [string, any][]): Promise<void>
+  protected async set(...pairs: any[]): Promise<void> {
+    const [k, v] = pairs
+    if (typeof k === 'string') {
+      pairs = [[k, v]]
+    }
     await this.lock.add('write')
     try {
       const body = await this.read()
