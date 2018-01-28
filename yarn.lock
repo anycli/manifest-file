@@ -102,9 +102,9 @@
   dependencies:
     find-up "^2.1.0"
 
-"@dxcli/dev@^2.0.14":
-  version "2.0.14"
-  resolved "https://registry.yarnpkg.com/@dxcli/dev/-/dev-2.0.14.tgz#44834aa54dc60a11737e583a1716405207ab81a2"
+"@dxcli/dev@^2.0.15":
+  version "2.0.15"
+  resolved "https://registry.yarnpkg.com/@dxcli/dev/-/dev-2.0.15.tgz#2984dabb5e8069515ed328cb59d920a00bee7483"
   dependencies:
     "@dxcli/nyc-config" "^0.0.4"
     "@types/ansi-styles" "^2.0.30"
@@ -772,12 +772,6 @@ center-align@^0.1.1:
     align-text "^0.1.3"
     lazy-cache "^1.0.3"
 
-chai-as-promised@^7.1.1:
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/chai-as-promised/-/chai-as-promised-7.1.1.tgz#08645d825deb8696ee61725dbf590c012eb00ca0"
-  dependencies:
-    check-error "^1.0.2"
-
 chai@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/chai/-/chai-4.1.2.tgz#0f64584ba642f0f2ace2806279f4f06ca23ad73c"
@@ -825,7 +819,7 @@ charenc@~0.0.1:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
 
-check-error@^1.0.1, check-error@^1.0.2:
+check-error@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/check-error/-/check-error-1.0.2.tgz#574d312edd88bb5dd8912e9286dd6c0aed4aac82"
 
@@ -1170,7 +1164,7 @@ debug-log@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/debug-log/-/debug-log-1.0.1.tgz#2307632d4c04382b8df8a32f70b895046d52745f"
 
-debug@*, debug@3.1.0, debug@^3.1.0:
+debug@3.1.0, debug@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   dependencies:
@@ -1579,13 +1573,6 @@ extsprintf@1.3.0:
 extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
-
-fancy-test@^0.6.4:
-  version "0.6.4"
-  resolved "https://registry.yarnpkg.com/fancy-test/-/fancy-test-0.6.4.tgz#3104b64348f93983827beec614cc89c084a8118c"
-  dependencies:
-    lodash "^4.17.4"
-    stdout-stderr "^0.1.4"
 
 fast-deep-equal@^1.0.0:
   version "1.0.0"
@@ -3918,13 +3905,6 @@ static-extend@^0.1.1:
   dependencies:
     define-property "^0.2.5"
     object-copy "^0.1.0"
-
-stdout-stderr@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/stdout-stderr/-/stdout-stderr-0.1.4.tgz#57aae28cf19bbc0faddcf75a7464389d813faa9f"
-  dependencies:
-    debug "*"
-    strip-ansi "^4.0.0"
 
 stream-combiner2@~1.1.1:
   version "1.1.1"
