@@ -1,7 +1,7 @@
 {
   "name": "@dxcli/manifest-file",
   "description": "base json file wrapper used inside dxcli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Jeff Dickey @jdxcode",
   "bugs": "https://github.com/dxcli/manifest-file/issues",
   "dependencies": {

@@ -1,3 +1,11 @@
+<a name="0.0.5"></a>
+## [0.0.5](https://github.com/dxcli/manifest-file/compare/c15f6d9b4ea814c0e8af9b5a4cc6b02a0518f45c...v0.0.5) (2018-01-28)
+
+
+### Bug Fixes
+
+* ran generator ([07f262e](https://github.com/dxcli/manifest-file/commit/07f262e))
+
 <a name="0.0.4"></a>
 ## [0.0.4](https://github.com/dxcli/manifest-file/compare/1481d8e0e6a30a28dc3bd462b50470e919e70036...v0.0.4) (2018-01-26)
 
