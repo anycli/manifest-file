@@ -1,3 +1,11 @@
+<a name="0.1.0"></a>
+# [0.1.0](https://github.com/dxcli/manifest-file/compare/07f262e569f20a2690571de33da88acb46d860c1...v0.1.0) (2018-01-28)
+
+
+### Features
+
+* allow using set without array ([ebcd641](https://github.com/dxcli/manifest-file/commit/ebcd641))
+
 <a name="0.0.5"></a>
 ## [0.0.5](https://github.com/dxcli/manifest-file/compare/c15f6d9b4ea814c0e8af9b5a4cc6b02a0518f45c...v0.0.5) (2018-01-28)
 
