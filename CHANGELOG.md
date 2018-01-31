@@ -1,3 +1,11 @@
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/anycli/manifest-file/compare/d6ad582c5eb3c196374e1ba198d650bca6dece0b...v0.2.0) (2018-01-31)
+
+
+### Features
+
+* allow setting writeOptions ([f19ce8b](https://github.com/anycli/manifest-file/commit/f19ce8b))
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/anycli/manifest-file/compare/83f2978a83cde07839df8d38c1ed33e28c8ae182...v0.1.1) (2018-01-31)
 
