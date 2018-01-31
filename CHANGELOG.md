@@ -1,3 +1,11 @@
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/anycli/manifest-file/compare/83f2978a83cde07839df8d38c1ed33e28c8ae182...v0.1.1) (2018-01-31)
+
+
+### Bug Fixes
+
+* anycli rename ([d6ad582](https://github.com/anycli/manifest-file/commit/d6ad582))
+
 <a name="0.1.0"></a>
 # [0.1.0](https://github.com/dxcli/manifest-file/compare/07f262e569f20a2690571de33da88acb46d860c1...v0.1.0) (2018-01-28)
 
