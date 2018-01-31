@@ -12,6 +12,7 @@ interface Body {
 export default abstract class ManifestFile {
   protected lock: RWLockfile
   protected debug: any
+  protected writeOptions: fs.WriteOptions = {}
 
   constructor(public type: string, public file: string) {
     this.debug = require('debug')(this.type)
@@ -81,6 +82,6 @@ export default abstract class ManifestFile {
 
   private async write(body: Body): Promise<void> {
     this.debug('write', this.file)
-    await fs.outputJSON(this.file, body)
+    await fs.outputJSON(this.file, body, this.writeOptions)
   }
 }
