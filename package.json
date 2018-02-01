@@ -9,7 +9,7 @@
     "fs-extra": "^5.0.0",
     "load-json-file": "^4.0.0",
     "lodash": "^4.17.4",
-    "rwlockfile": "^2.0.22"
+    "rwlockfile": "^2.0.23"
   },
   "devDependencies": {
     "@anycli/tslint": "^0.2.1",
