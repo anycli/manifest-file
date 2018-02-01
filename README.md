@@ -1,5 +1,5 @@
 @anycli/manifest-file
-====================
+=====================
 
 base json file wrapper used inside anycli
 
