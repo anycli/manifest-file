@@ -1,4 +1,4 @@
-import {expect} from 'chai'
+import {expect, fancy} from 'fancy-test'
 import * as fs from 'fs-extra'
 import * as path from 'path'
 
@@ -18,8 +18,11 @@ class ManifestFile extends File {
   }
 }
 
-const file = path.join(__dirname, '../tmp/manifest.json')
+let count = 0
+const getFile = () => path.join(__dirname, `../tmp/manifest-${count++}.json`)
+let file: string
 beforeEach(async () => {
+  file = getFile()
   await fs.remove(file)
 })
 
@@ -36,5 +39,47 @@ describe('manifest', () => {
     await a.setAFooAWithoutArray(101)
     let b = new ManifestFile('manifestfile', file)
     expect(await b.getAFoo()).to.equal(101)
+  })
+
+  it('can reset', async () => {
+    let a = new ManifestFile('manifestfile', file)
+    await a.setAFooAWithoutArray(101)
+    let b = new ManifestFile('manifestfile', file)
+    expect(await b.getAFoo()).to.equal(101)
+    await a.reset()
+    expect(await b.getAFoo()).to.equal(undefined)
+  })
+
+  fancy
+  .do(async () => {
+    await fs.outputFile(file, '{')
+    let a = new ManifestFile('manifestfile', file)
+    await a.setAFooAWithoutArray(101)
+  })
+  .catch(/Unexpected end of JSON input/)
+  .do(async () => {
+    let a = new ManifestFile('manifestfile', file)
+    expect(await a.getAFoo()).to.equal(undefined)
+  })
+  .it('fails when json is invalid, but deletes old manifest so it works the next time')
+
+  describe('skipIfLocked', () => {
+    class SkipFile extends ManifestFile {
+      skipIfLocked = true
+
+      get lockfile() { return this.lock }
+    }
+
+    it('skips if something else has locked it', async () => {
+      let a = new SkipFile('manifestfile', file)
+      let b = new SkipFile('manifestfile', file)
+      await a.lockfile.add('write')
+      try {
+        await b.setAFooAWithoutArray(101)
+        expect(await a.getAFoo()).to.equal(undefined)
+      } finally {
+        await a.lockfile.remove('write')
+      }
+    })
   })
 })
