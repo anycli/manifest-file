@@ -1,3 +1,11 @@
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/anycli/manifest-file/compare/f19ce8bc177cea37bbb5c18fdbe22863c5683111...v0.3.0) (2018-02-01)
+
+
+### Features
+
+* added skipIfLocked flag ([2020473](https://github.com/anycli/manifest-file/commit/2020473))
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/anycli/manifest-file/compare/d6ad582c5eb3c196374e1ba198d650bca6dece0b...v0.2.0) (2018-01-31)
 
