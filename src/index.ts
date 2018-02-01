@@ -74,7 +74,7 @@ export default abstract class ManifestFile {
         return false
       }
     } else {
-      await this.lock.add(type, {reason: `@anycli/manifest-file: ${reason}\n${this.file}`})
+      await this.lock.add(type, {reason: `@anycli/manifest-file: ${reason} ${this.file}`})
       return true
     }
   }
