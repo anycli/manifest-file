@@ -1,3 +1,11 @@
+<a name="0.3.3"></a>
+## [0.3.3](https://github.com/anycli/manifest-file/compare/4d8744f6e78da25c9fd2dde02ad2df1fa568db35...v0.3.3) (2018-02-01)
+
+
+### Bug Fixes
+
+* bump manifest-file ([a2fdedd](https://github.com/anycli/manifest-file/commit/a2fdedd))
+
 <a name="0.3.2"></a>
 ## [0.3.2](https://github.com/anycli/manifest-file/compare/7bcee14602192d404e5b0c62aa29736a295259da...v0.3.2) (2018-02-01)
 
