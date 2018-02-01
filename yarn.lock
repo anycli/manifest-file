@@ -1879,9 +1879,9 @@ run-async@^2.2.0:
   dependencies:
     is-promise "^2.1.0"
 
-rwlockfile@^2.0.21:
-  version "2.0.21"
-  resolved "https://registry.yarnpkg.com/rwlockfile/-/rwlockfile-2.0.21.tgz#c2eb13d77df18dbb268dcd28017df17d5a97f8a8"
+rwlockfile@^2.0.22:
+  version "2.0.22"
+  resolved "https://registry.yarnpkg.com/rwlockfile/-/rwlockfile-2.0.22.tgz#5c6010096bba4db9fe580ffeaa7807f0f80eed5a"
   dependencies:
     fs-extra "^5.0.0"
     is-process-active "^1.0.1"
