@@ -1,3 +1,11 @@
+<a name="0.3.2"></a>
+## [0.3.2](https://github.com/anycli/manifest-file/compare/7bcee14602192d404e5b0c62aa29736a295259da...v0.3.2) (2018-02-01)
+
+
+### Bug Fixes
+
+* rwlockfile bump ([4d8744f](https://github.com/anycli/manifest-file/commit/4d8744f))
+
 <a name="0.3.1"></a>
 ## [0.3.1](https://github.com/anycli/manifest-file/compare/20204731e436e69b5c9aec976eb357961318c931...v0.3.1) (2018-02-01)
 
