@@ -1,3 +1,11 @@
+<a name="0.3.1"></a>
+## [0.3.1](https://github.com/anycli/manifest-file/compare/20204731e436e69b5c9aec976eb357961318c931...v0.3.1) (2018-02-01)
+
+
+### Bug Fixes
+
+* minor debug fix ([7bcee14](https://github.com/anycli/manifest-file/commit/7bcee14))
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/anycli/manifest-file/compare/f19ce8bc177cea37bbb5c18fdbe22863c5683111...v0.3.0) (2018-02-01)
 
