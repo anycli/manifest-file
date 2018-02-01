@@ -1,3 +1,11 @@
+<a name="0.3.4"></a>
+## [0.3.4](https://github.com/anycli/manifest-file/compare/a2fdeddca0370687ea318d6754c6c519f6bab61b...v0.3.4) (2018-02-01)
+
+
+### Bug Fixes
+
+* expose most methods ([be95826](https://github.com/anycli/manifest-file/commit/be95826))
+
 <a name="0.3.3"></a>
 ## [0.3.3](https://github.com/anycli/manifest-file/compare/4d8744f6e78da25c9fd2dde02ad2df1fa568db35...v0.3.3) (2018-02-01)
 
