@@ -9,7 +9,7 @@ interface Body {
   [k: string]: any
 }
 
-export default abstract class ManifestFile {
+export default class ManifestFile {
   protected lock: RWLockfile
   protected debug: any
   protected writeOptions: fs.WriteOptions = {}
@@ -30,9 +30,9 @@ export default abstract class ManifestFile {
     }
   }
 
-  protected async get<T>(key: string): Promise<T | undefined>
-  protected async get<T, U>(key: string, secondKey: string): Promise<[T | undefined, U | undefined]>
-  protected async get(key: string, secondKey?: string): Promise<any> {
+  async get<T>(key: string): Promise<T | undefined>
+  async get<T, U>(key: string, secondKey: string): Promise<[T | undefined, U | undefined]>
+  async get(key: string, secondKey?: string): Promise<any> {
     if (!await this.addLock('read', `get ${key}`)) return
     try {
       this.debug('get', _.compact([key, secondKey]))
@@ -43,9 +43,9 @@ export default abstract class ManifestFile {
     }
   }
 
-  protected async set(key: string, value: any): Promise<void>
-  protected async set(...pairs: [string, any][]): Promise<void>
-  protected async set(...pairs: any[]): Promise<void> {
+  async set(key: string, value: any): Promise<void>
+  async set(...pairs: [string, any][]): Promise<void>
+  async set(...pairs: any[]): Promise<void> {
     const [k, v] = pairs
     if (typeof k === 'string') {
       pairs = [[k, v]]
@@ -63,7 +63,7 @@ export default abstract class ManifestFile {
     }
   }
 
-  protected async addLock(type: 'write' | 'read', reason: string): Promise<boolean> {
+  async addLock(type: 'write' | 'read', reason: string): Promise<boolean> {
     if (this.skipIfLocked) {
       try {
         await this.lock.tryLock(type, `@anycli/manifest-file: ${reason}\n${this.file}`)

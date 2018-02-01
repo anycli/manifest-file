@@ -10,7 +10,7 @@ class ManifestFile extends File {
   }
 
   async setAFoo(n: number) {
-    return this.set(['foo', n])
+    return this.set('foo', n)
   }
 
   async setAFooAWithoutArray(n: number) {
@@ -32,6 +32,14 @@ describe('manifest', () => {
     await a.setAFoo(101)
     let b = new ManifestFile('manifestfile', file)
     expect(await b.getAFoo()).to.equal(101)
+  })
+
+  it('can save multiple keys', async () => {
+    let a = new File('manifestfile', file)
+    let b = new File('manifestfile', file)
+    await a.set(['foo', 1], ['bar', 2])
+    expect(await b.get('foo')).to.equal(1)
+    expect(await b.get('bar')).to.equal(2)
   })
 
   it('reads and saves without array', async () => {
