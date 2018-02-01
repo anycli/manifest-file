@@ -1,3 +1,11 @@
+<a name="0.3.5"></a>
+## [0.3.5](https://github.com/anycli/manifest-file/compare/be958267c2a3c27694fc00e9c82f3a3b03201dba...v0.3.5) (2018-02-01)
+
+
+### Bug Fixes
+
+* ran generator ([7df87af](https://github.com/anycli/manifest-file/commit/7df87af))
+
 <a name="0.3.4"></a>
 ## [0.3.4](https://github.com/anycli/manifest-file/compare/a2fdeddca0370687ea318d6754c6c519f6bab61b...v0.3.4) (2018-02-01)
 
