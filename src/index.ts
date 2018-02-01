@@ -13,6 +13,7 @@ export default abstract class ManifestFile {
   protected lock: RWLockfile
   protected debug: any
   protected writeOptions: fs.WriteOptions = {}
+  protected skipIfLocked = false
 
   constructor(public type: string, public file: string) {
     this.debug = require('debug')(this.type)
@@ -20,7 +21,7 @@ export default abstract class ManifestFile {
   }
 
   async reset() {
-    await this.lock.add('write')
+    if (!await this.addLock('write', 'reset')) return
     try {
       this.debug('reset', this.file)
       await fs.remove(this.file)
@@ -32,7 +33,7 @@ export default abstract class ManifestFile {
   protected async get<T>(key: string): Promise<T | undefined>
   protected async get<T, U>(key: string, secondKey: string): Promise<[T | undefined, U | undefined]>
   protected async get(key: string, secondKey?: string): Promise<any> {
-    await this.lock.add('read')
+    if (!await this.addLock('read', `get ${key}`)) return
     try {
       this.debug('get', _.compact([key, secondKey]))
       const body = await this.read()
@@ -49,7 +50,7 @@ export default abstract class ManifestFile {
     if (typeof k === 'string') {
       pairs = [[k, v]]
     }
-    await this.lock.add('write')
+    if (!await this.addLock('read', `write ${pairs.map(([k]) => k).join(', ')}`)) return
     try {
       const body = await this.read()
       for (let [k, v] of pairs) {
@@ -59,6 +60,22 @@ export default abstract class ManifestFile {
       await this.write(body)
     } finally {
       await this.lock.remove('write')
+    }
+  }
+
+  protected async addLock(type: 'write' | 'read', reason: string): Promise<boolean> {
+    if (this.skipIfLocked) {
+      try {
+        await this.lock.tryLock(type, `@anycli/manifest-file: ${reason}\n${this.file}`)
+        return true
+      } catch (err) {
+        if (err.code !== 'ELOCK') throw err
+        this.debug(err)
+        return false
+      }
+    } else {
+      await this.lock.add(type, {reason: `@anycli/manifest-file: ${reason}\n${this.file}`})
+      return true
     }
   }
 
