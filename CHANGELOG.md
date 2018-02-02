@@ -1,3 +1,11 @@
+<a name="0.3.9"></a>
+## [0.3.9](https://github.com/anycli/manifest-file/compare/729865a5938d171094d527d8fd46232f29e5b403...v0.3.9) (2018-02-02)
+
+
+### Bug Fixes
+
+* bump cli-ux ([982a3d8](https://github.com/anycli/manifest-file/commit/982a3d8))
+
 <a name="0.3.8"></a>
 ## [0.3.8](https://github.com/anycli/manifest-file/compare/5694507f0ecf4775db519438d59ec5870d03869a...v0.3.8) (2018-02-02)
 
