@@ -59,17 +59,15 @@ describe('manifest', () => {
   })
 
   fancy
-  .do(async () => {
+  .stderr()
+  .do(async ctx => {
     await fs.outputFile(file, '{')
     let a = new ManifestFile('manifestfile', file)
-    await a.setAFooAWithoutArray(101)
+    await a.set('foo', 101)
+    expect(await a.get('foo')).to.equal(101)
+    expect(ctx.stderr).to.contain("Warning: Unexpected end of JSON input while parsing near '{' in")
   })
-  .catch(/Unexpected end of JSON input/)
-  .do(async () => {
-    let a = new ManifestFile('manifestfile', file)
-    expect(await a.getAFoo()).to.equal(undefined)
-  })
-  .it('fails when json is invalid, but deletes old manifest so it works the next time')
+  .it('warns when json is invalid, but deletes old manifest so it can still be used')
 
   describe('skipIfLocked', () => {
     class SkipFile extends ManifestFile {

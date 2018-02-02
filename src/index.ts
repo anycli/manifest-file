@@ -1,3 +1,4 @@
+import cli from 'cli-ux'
 import * as fs from 'fs-extra'
 import * as loadJSON from 'load-json-file'
 import * as _ from 'lodash'
@@ -71,7 +72,7 @@ export default class ManifestFile {
         })
       } catch (err) {
         if (this.skipIfLocked && err.code === 'ELOCKED') return false
-        throw err
+        cli.warn(err)
       }
     }
     this.lockCount++
@@ -100,7 +101,7 @@ export default class ManifestFile {
         this.debug('manifest not found', this.file)
       } else {
         await fs.remove(this.file)
-        throw err
+        cli.warn(err)
       }
     }
   }
