@@ -74,19 +74,18 @@ describe('manifest', () => {
   describe('skipIfLocked', () => {
     class SkipFile extends ManifestFile {
       skipIfLocked = true
-
-      get lockfile() { return this.lock }
     }
 
     it('skips if something else has locked it', async () => {
       let a = new SkipFile('manifestfile', file)
       let b = new SkipFile('manifestfile', file)
-      await a.lockfile.add('write')
+      await a.setAFooAWithoutArray(101)
+      await a.addLock()
       try {
-        await b.setAFooAWithoutArray(101)
-        expect(await a.getAFoo()).to.equal(undefined)
+        await b.setAFooAWithoutArray(102)
+        expect(await a.getAFoo()).to.equal(101)
       } finally {
-        await a.lockfile.remove('write')
+        await a.removeLock()
       }
     })
   })

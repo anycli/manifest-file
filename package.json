@@ -9,7 +9,7 @@
     "fs-extra": "^5.0.0",
     "load-json-file": "^4.0.0",
     "lodash": "^4.17.4",
-    "rwlockfile": "^2.0.23"
+    "proper-lockfile": "^3.0.2"
   },
   "devDependencies": {
     "@anycli/tslint": "^0.2.1",
@@ -46,7 +46,7 @@
   "repository": "anycli/manifest-file",
   "scripts": {
     "build": "rm -rf lib && tsc",
-    "lint": "concurrently \"eslint .\" \"tsc -p test --noEmit\" \"tslint -p test\"",
+    "lint": "concurrently -p command \"eslint .\" \"tsc -p test --noEmit\" \"tslint -p test\"",
     "posttest": "yarn run lint",
     "prepublishOnly": "yarn run build",
     "test": "mocha --forbid-only \"test/**/*.test.ts\""
