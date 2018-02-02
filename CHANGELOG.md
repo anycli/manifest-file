@@ -1,3 +1,13 @@
+<a name="0.3.7"></a>
+## [0.3.7](https://github.com/anycli/manifest-file/compare/acb423ccce4d4611e6c55936471ff50b0bdaebe2...v0.3.7) (2018-02-02)
+
+
+### Bug Fixes
+
+* bump tslint ([6b995e2](https://github.com/anycli/manifest-file/commit/6b995e2))
+* ran generator ([5694507](https://github.com/anycli/manifest-file/commit/5694507))
+* warn on lock/syntax errors ([936634e](https://github.com/anycli/manifest-file/commit/936634e))
+
 <a name="0.3.6"></a>
 ## [0.3.6](https://github.com/anycli/manifest-file/compare/7df87af93bbbe98e8f251287d2892f232195946e...v0.3.6) (2018-02-02)
 
