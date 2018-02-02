@@ -1,3 +1,11 @@
+<a name="0.3.8"></a>
+## [0.3.8](https://github.com/anycli/manifest-file/compare/5694507f0ecf4775db519438d59ec5870d03869a...v0.3.8) (2018-02-02)
+
+
+### Bug Fixes
+
+* handle lock releasing errors ([729865a](https://github.com/anycli/manifest-file/commit/729865a))
+
 <a name="0.3.7"></a>
 ## [0.3.7](https://github.com/anycli/manifest-file/compare/acb423ccce4d4611e6c55936471ff50b0bdaebe2...v0.3.7) (2018-02-02)
 
