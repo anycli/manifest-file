@@ -27,7 +27,7 @@ export default class ManifestFile {
       this.debug('reset', this.file)
       await fs.remove(this.file)
     } finally {
-      this.removeLock()
+      await this.removeLock()
     }
   }
 
@@ -59,7 +59,7 @@ export default class ManifestFile {
       await this.write(body)
       return true
     } finally {
-      this.removeLock()
+      await this.removeLock()
     }
   }
 
@@ -79,12 +79,16 @@ export default class ManifestFile {
     return true
   }
 
-  removeLock() {
+  async removeLock() {
     this.debug('removeLock lockCount:', this.lockCount)
     this.lockCount--
     if (this.lockCount < 0) this.lockCount = 0
     if (this.lockCount === 0 && this.lockRelease) {
-      this.lockRelease()
+      try {
+        await this.lockRelease()
+      } catch (err) {
+        cli.warn(err)
+      }
       delete this.lockRelease
     }
   }
