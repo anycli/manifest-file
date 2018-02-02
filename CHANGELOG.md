@@ -1,3 +1,11 @@
+<a name="0.3.6"></a>
+## [0.3.6](https://github.com/anycli/manifest-file/compare/7df87af93bbbe98e8f251287d2892f232195946e...v0.3.6) (2018-02-02)
+
+
+### Bug Fixes
+
+* switch to proper-lockfile ([acb423c](https://github.com/anycli/manifest-file/commit/acb423c))
+
 <a name="0.3.5"></a>
 ## [0.3.5](https://github.com/anycli/manifest-file/compare/be958267c2a3c27694fc00e9c82f3a3b03201dba...v0.3.5) (2018-02-01)
 
